@@ -4,7 +4,11 @@
 		"description": "Proyecto de salud en TypeScript",
 		"main": "index.js",
 		"scripts": {
-				"test": "echo \"Error: no test specified\" && exit 1"
+				"test": "echo \"Error: no test specified\" && exit 1",
+				"clean": "rimraf cache dist reports coverage",
+				"build": "tsc && gulp minify",
+				"serve": "cross-env NODE_ENV=production node dist/server.js",
+				"develop": "nodemon src/server.ts"
 		},
 		"keywords": [
 				"dr",
@@ -20,6 +24,7 @@
 				"express": "^4.17.1",
 				"joi": "^17.3.0",
 				"jwt-simple": "^0.5.6",
+				"lodash": "^4.17.20",
 				"moment": "^2.29.1",
 				"pg": "^8.5.1",
 				"reflect-metadata": "^0.1.13",
@@ -31,6 +36,7 @@
 				"@types/bcryptjs": "^2.4.2",
 				"@types/cors": "^2.8.9",
 				"@types/express": "^4.17.11",
+				"@types/lodash": "^4.14.168",
 				"@types/joi": "^17.2.3",
 				"@types/node": "^14.14.21",
 				"eslint": "^7.18.0",

@@ -12,14 +12,14 @@ export class DatabaseBootstrap implements IDatabaseBootstrap {
 	async initialize() {
 		const promise = new Promise((resolve, reject) => {
 			const parametersConnection = {
-				host: env.DATABASE.MYSQL.HOST,
-				type: env.DATABASE.MYSQL.TYPE,
-				username: env.DATABASE.MYSQL.USERNAME,
-				password: env.DATABASE.MYSQL.PASSWORD,
-				database: env.DATABASE.MYSQL.DATABASE,
-				port: env.DATABASE.MYSQL.PORT,
-				entities: [env.DATABASE.MYSQL.ENTITIES],
-				synchronize: env.DATABASE.MYSQL.SYNCHRONIZE,
+				host: env.DATABASE.POSTGRES.HOST,
+				type: env.DATABASE.POSTGRES.TYPE,
+				username: env.DATABASE.POSTGRES.USERNAME,
+				password: env.DATABASE.POSTGRES.PASSWORD,
+				database: env.DATABASE.POSTGRES.DATABASE,
+				port: env.DATABASE.POSTGRES.PORT,
+				entities: [env.DATABASE.POSTGRES.ENTITIES],
+				synchronize: env.DATABASE.POSTGRES.SYNCHRONIZE,
 			};
 
 			createConnection(parametersConnection).then(

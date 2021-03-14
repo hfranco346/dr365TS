@@ -1,11 +1,11 @@
 import {
 	DatabaseBootstrap,
 	IDatabaseBootstrap,
-} from './bootstrap/database.bootstrap';
+} from './_bootstrap/database.bootstrap';
 import {
 	IServerBootstrap,
 	ServerBootstrap,
-} from './bootstrap/server.bootstrap';
+} from './_bootstrap/server.bootstrap';
 import app from './app';
 
 const start = async () => {

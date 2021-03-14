@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
-import { Errors } from '../../compartido/infraestructura/errors';
-import { UsuarioOperation } from '../../usuarios/infraestructura/usuario.operation';
+import { Errors } from '../../_compartido/infraestructura/errors';
+import { UsuarioOperation } from '../../core/usuarios/infraestructura/usuario.operation';
 import { AuthUseCase } from '../aplicacion/auth.usecase';
 import { AuthController } from './auth.controller';
 

@@ -1,6 +1,6 @@
 import { getRepository } from 'typeorm';
-import GenericoDatabaseRepository from '../../../compartido/infraestructura/generico-database.repository';
-import { Usuario } from '../../dominio/usuario.entity';
+import GenericoDatabaseRepository from '../../../_compartido/infraestructura/generico-database.repository';
+import { Usuario } from '../../../_entidades/usuario.entity';
 import { UsuarioRepository } from '../dominio/usuario.repository';
 
 export class UsuarioOperation

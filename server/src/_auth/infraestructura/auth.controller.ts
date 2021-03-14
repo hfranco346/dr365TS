@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { AuthUseCase } from '../aplicacion/auth.usecase';
-import { UsuarioModel } from '../../usuarios/dominio/usuario.model';
+import { UsuarioModel } from '../../core/usuarios/dominio/usuario.model';
 
 export class AuthController {
 	constructor(private readonly usecase: AuthUseCase) {

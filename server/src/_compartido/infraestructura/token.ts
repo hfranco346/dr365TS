@@ -1,6 +1,6 @@
 import jwt_simple from 'jwt-simple';
-import { v4 as uuidv4 } from 'uuid';
-import { UsuarioModel } from '../../usuarios/dominio/usuario.model';
+// import { v4 as uuidv4 } from 'uuid';
+import { UsuarioModel } from '../../core/usuarios/dominio/usuario.model';
 import yenv from 'yenv';
 import moment from 'moment';
 
@@ -13,7 +13,7 @@ export class Tokens {
 			exp: moment().add(env.TOKEN.TIMEOUT, env.TOKEN.UNITS).unix(),
 			nombre: user.nombre,
 			email: user.correo,
-			roles: user.roles.map((el: any) => el.rol),
+			// roles: user.roles.map((el: any) => el.rol),
 		};
 
 		const accessToken = jwt_simple.encode(payload, env.TOKEN.KEYWORD_SECRET);
@@ -21,8 +21,8 @@ export class Tokens {
 	}
 
 	static generateRefreshToken() {
-		const refreshToken = uuidv4();
-		return refreshToken;
+		// const refreshToken = uuidv4();
+		// return refreshToken;
 	}
 
 	static validateAccessToken(accessToken: string): Promise<any> {
